@@ -26,6 +26,7 @@ func SelectOpenAPIVersion(version openapi.APIVersion) error {
 		log.Errorf("version %v openapi not found or setup", version)
 		return errs.ErrNotFoundOpenAPI
 	}
+	log.Info("add a log for pr")
 	openapi.DefaultImpl = openapi.VersionMapping[version]
 	return nil
 }
